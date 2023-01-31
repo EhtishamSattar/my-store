@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+body{
+    box-sizing: border-box;
+}
+#drawer-example::-webkit-scrollbar{
+    display: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#navbar{
+    z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#top{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:40px;
+    background-color: black;
+    z-index:0;
+
+}
+.text{
+    flex:0.6;
+    margin-right:10px;
+    
+}
+.carousel{
+    flex:0.4;
+    margin-left:40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#default-carousel{
+    box-shadow: 0px 0px 20px 10px #bb812b;
+    z-index:0;
 }
 
-.App-link {
-  color: #61dafb;
+#cart{
+    z-index:1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* ThreeBoxes */
+
+#threeBoxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
+
+.box1{
+    overflow: hidden;
+    
+}
+.box1:hover > .expand{
+    transition: .5s ease;
+    /* transform: scale(1.5); */
+    height: 120px;
+    background-color: rgb(25, 25, 89);
+}
+.box2:hover > .expand{
+    
+    transition: .5s ease;
+    /* transform: scale(1.5); */
+    height: 120px;
+    background-color: rgb(25, 25, 89);
+}
+.box3:hover > .expand{
+    transition: .5s ease;
+    /* transform: scale(1.5); */
+    height: 120px;
+    background-color: rgb(25, 25, 89);
+}
+.box1:hover > .number{
+    visibility:initial;
+    
+}
+
+
+/* media queries */
+@media only screen and (max-width: 640px) {
+    #topContent{
+      flex-direction: column;
+    }
+   
+    #textAboveItems{
+        font-size: 30px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .itemImage{
+        height:200px;
+        width:200px;
+        margin:auto;
+    }
+}
+
+@media only screen and (max-width: 788px) {
+    #top{
+        flex-direction: column;
+    }
+    #top > .text > .sub-content1{
+        font-size: 40px;
+        font-weight: bolder;
+    }
+    #threeBoxes{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .carousel{
+        
+        margin:40px 20px;
+        width:100%;
+        
+    }
+}
+@media only screen and (max-width: 843px) {
+    #topitems{
+        display: none;
+    }
+}
+

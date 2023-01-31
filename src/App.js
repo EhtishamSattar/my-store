@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Items from './Components/Items';
+import Footer from './Components/Footer';
+import Navbar from './Components/Navbar';
+import Top from './Components/Top';
+import Cart from './Components/Cart';
+import ThreeBox from './Components/ThreeBox';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar/>
+      <Top/>
+      <ThreeBox/>
+      <hr className='border border-gray-400 mt-10 ml-3 mr-3'></hr>
+      <div className='mx-10 mb-3 mt-3'>
+        <Items />
+      </div>
+      <Cart/>
+      <Footer/>
     </div>
+
   );
 }
 
