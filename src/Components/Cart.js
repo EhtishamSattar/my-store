@@ -33,7 +33,7 @@ const Cart = () => {
     return (
         <>
             <div id="cart" className={`fixed bottom-0 right-0 top-auto text-center bg-yellow-500  flex flex-row-reverse mr-7 mb-7`}>
-                <button type="button" className={`${hidden ? '' : 'hidden' }  text-black bg-black hover:bg-yellow-400 font-medium text-lg px-3 py-2.5  focus:outline-none focus:ring-4`} onClick={handleClick} data-drawer-placement="left" data-drawer-target="drawer-example" data-drawer-backdrop="false" data-drawer-show="drawer-example" aria-controls="drawer-example">
+                <button type="button" className={`${hidden ? '' : 'hidden' }  text-white bg-black hover:bg-yellow-400 font-medium text-lg px-3 py-2.5  focus:outline-none focus:ring-4`} onClick={handleClick} data-drawer-placement="left" data-drawer-target="drawer-example" data-drawer-backdrop="false" data-drawer-show="drawer-example" aria-controls="drawer-example">
                     Check <ShoppingCartSharpIcon/> 
                 </button>
             </div>
